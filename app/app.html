@@ -2,49 +2,40 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link type="text/css" rel="stylesheet" href="css/material.css">
+    <meta charset="utf-8">
 
-  <title>My first Vue app</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
+
+    <title>My first Vue app, with MaterializeCSS</title>
 </head>
 
 <body>
 
-  <div 
-    id="vdiv"
-    class="demo-card-square mdl-card mdl-shadow--2dp">
+    <div id="vdiv" class="container">
 
-      <div class="mdl-card__title mdl-card--expand">
-        <h2 class="mdl-card__title-text">{{ message }}</h2>
-      </div>
+        <h2>{{ message }}</h2>
 
-      <div class="mdl-card__supporting-text">
-        Fill up the message.
-        Press Reverse.
-      </div>
+        <form>
+            <div class="input-field">
+                <input placeholder="Input your message" id="message" type="text" v-model="message">
+                <label for="message">Message</label>
+            </div>
 
-      <div class="mdl-card__actions mdl-card--border">    
-  
-        <input
-          class="mdl-textfield__input"
-          type="text"
-          v-model="message">
+            <a class="waves-effect waves-light btn" v-on:click="reverseMessage">Reverse</a>
+        </form>
 
-        <button
-          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" 
-          v-on:click="reverseMessage">
-        Reverse  
-      </button>    
-          
-      </div>
+
     </div>
 
-  <script type="text/javascript" src="js/material.js"></script>
 
-  <script type="text/javascript" src="js/vue.js"></script>
-  <script type="text/javascript" src="js/app.js"></script>
-  </script>
-  
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/materialize.js"></script>
+
+    <script type="text/javascript" src="js/vue.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    </script>
+
 
 </body>
 
