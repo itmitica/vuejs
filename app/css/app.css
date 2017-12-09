@@ -1,5 +1,9 @@
 code {
-    background-color: #eee;
-    border: 1px solid #999;
-    padding: 5px;
-  }
+  color: #d73a49;
+  padding: 6px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  /* background-color: #f6f8fa; */
+  border-radius: 3px;
+}

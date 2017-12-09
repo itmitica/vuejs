@@ -14,45 +14,55 @@
 
 <body>
 
-    <div class="container">
+    <div class="container" id="demo-intro">
 
-        <div id="demo-intro">
+        <div class="row">
 
-            <h2>Introduction</h2>
+            <div class="col s12 m8 l6 xl6">
 
-            <ul class="collection">
-                <li class="collection-item" v-for="directive in directives">
-                    <div class="row">
-                        <div class="col s2">
-                            <code>{{ directive.code }}</code>
-                        </div>
-                        <div class="col s10">{{ directive.text }}</div>
+                <h2>{{message }}</h2>
+
+                <form>
+                    <div class="input-field">
+                        <input placeholder="Input your message" id="message" type="text" v-model="message">
+                        <label for="message">Message</label>
                     </div>
-                </li>
-            </ul>
 
-            <h3>{{ message }}</h3>
+                    <a class="waves-effect waves-light btn" v-on:click="reverseMessage">Reverse</a>
+                </form>
 
-            <form>
-                <div class="input-field">
-                    <input placeholder="Input your message" id="message" type="text" v-model="message">
-                    <label for="message">Message</label>
+                <p>Watch here &rarr;
+                    <span v-if="seen">Now you see me</span>
+                </p>
+
+                <div class="switch">
+                    <label>
+                        Off
+                        <input type="checkbox" id="toggle-visibility" checked v-on:click="toggleVisibility">
+                        <span class="lever"></span>
+                        On
+                    </label>
                 </div>
 
-                <a class="waves-effect waves-light btn" v-on:click="reverseMessage">Reverse</a>
-            </form>
+            </div>
 
-            <p>Watch here &rarr;
-                <span v-if="seen">Now you see me</span>
-            </p>
+            <div class="col s12 m8 l6 xl6">
 
-            <div class="switch">
-                <label>
-                    Off
-                    <input type="checkbox" id="toggle-visibility" checked v-on:click="toggleVisibility">
-                    <span class="lever"></span>
-                    On
-                </label>
+                <h2>Introduction</h2>
+
+                <div class="card">
+
+                    <ul class="collection">
+                        <li class="collection-item" v-for="directive in directives">
+                            <div>
+                                <code>{{ directive.code }}</code>
+                                <div class="secondary-content">{{ directive.text }}</div>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+
             </div>
 
         </div>

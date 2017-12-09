@@ -1,7 +1,7 @@
 var demoIntro = new Vue({
     el: '#demo-intro',
     data: {
-        message: 'Hello Vue.js!',
+        message: 'Hello Vue!',
         seen: true,
         directives: [
             { code: '{{ }}', text: "binding content (text interpolation)" },
