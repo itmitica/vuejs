@@ -14,41 +14,50 @@
 
 <body>
 
-    <div class="container" id="demo-intro">
+    <div id="demo-intro">
 
         <div class="row">
 
-            <div class="col s12 m8 l6 xl6">
+            <div class="col s12 m12 l7 xl7">
 
                 <h2>Introduction</h2>
 
-                <div class="card">
+                <div class="card-panel grey lighten-4">
 
-                    <ul class="collection">
-                        <li class="collection-item" v-for="directive in directives">
-                            <div>
-                                <code>{{ directive.code }}</code>
-                                <div class="secondary-content">{{ directive.text }}</div>
-                            </div>
-                        </li>
-                    </ul>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Directive</th>
+                                <th>Result</th>
+                                <th>Placement</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr v-for="directive in directives">
+                                <td>
+                                    <code>{{ directive.code }}</code>
+                                </td>
+                                <td>{{ directive.result }}</td>
+                                <td>{{ directive.placement }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
                 </div>
 
             </div>
 
-            <div class="col s12 m8 l6 xl6">
+            <div class="col s12 m12 l5 xl5">
 
                 <h2>{{message }}</h2>
 
-                <form>
-                    <div class="input-field">
-                        <input placeholder="Input your message" id="message" type="text" v-model="message">
-                        <label for="message">Message</label>
-                    </div>
+                <div class="input-field">
+                    <input placeholder="Input your message" id="message" type="text" v-model="message">
+                    <label for="message">Message</label>
+                </div>
 
-                    <a class="waves-effect waves-light btn" v-on:click="reverseMessage">Reverse</a>
-                </form>
+                <a class="waves-effect waves-light btn" v-on:click="reverseMessage">Reverse</a>
 
                 <p v-bind:class="seenColor">Watch here &rarr;
                     <span v-if="seen">Now you see me</span>

@@ -5,11 +5,12 @@ var demoIntro = new Vue({
         seen: true,
         seenColor: "",
         directives: [
-            { code: '{{ }}', text: "binding content" },
-            { code: 'v-bind', text: "binding attributes" },
-            { code: 'v-model', text: "binding input (two way)" },
-            { code: 'v-if', text: "binding DOM structure" },
-            { code: 'v-for', text: "binding DOM structure" }
+            { code: '{{ }}', result: "binding content", placement: "as content" },
+            { code: 'v-bind', result: "binding attributes",  placement: "as attribute prefix" },
+            { code: 'v-model', result: "binding input, two way", placement: "as input element attribute" },
+            { code: 'v-if', result: "binding DOM structure", placement: "as element attribute" },
+            { code: 'v-for', result: "binding DOM structure", placement: "as element attribute" },
+            { code: 'v-on', result: "binding events", placement: "as event prefix" }
         ]
     },
     methods: {
