@@ -2,8 +2,12 @@ code {
   color: #d73a49;
   padding: 6px;
   overflow: auto;
-  font-size: 85%;
+  font-size: 75%;
   line-height: 1.45;
-  /* background-color: #f6f8fa; */
+  background-color: #f6f8fa;
   border-radius: 3px;
+}
+
+td.code {
+  white-space:nowrap;
 }

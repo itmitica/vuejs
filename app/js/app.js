@@ -5,12 +5,12 @@ var demoIntro = new Vue({
         seen: true,
         seenColor: "",
         directives: [
-            { code: '{{ property }}', result: "binding content to app state", placement: "as content" },
-            { code: 'v-bind:attribute="property"', result: "binding attributes to app state",  placement: "as prefix for attribute" },
-            { code: 'v-model="property"', result: "binding input to app state, two way", placement: "as custom attribute for input element" },
-            { code: 'v-if="property"', result: "binding DOM structure to app state", placement: "as custom attribute for element" },
-            { code: 'v-for="property enumeration"', result: "binding DOM structure to app state", placement: "as custom attribute for element" },
-            { code: 'v-on:event="method"', result: "binding events to app methods", placement: "as custom event for element" }
+            { code: '{{ property }}', effect: "Binds document content to app 'data' state", placement: "Place as content" },
+            { code: 'v-bind:attribute="property"', effect: "Binds element attributes to app 'data' state",  placement: "Place as prefix for attribute" },
+            { code: 'v-model="property"', effect: "Binds input element value to app 'data' state, two way", placement: "Place as custom attribute for input element" },
+            { code: 'v-if="property"', effect: "Binds DOM structure to app 'data' state", placement: "Place as custom attribute for element" },
+            { code: 'v-for="var in property"', effect: "Binds DOM structure to app 'data' state", placement: "Place as custom attribute for element" },
+            { code: 'v-on:event="method"', effect: "Binds events to app methods", placement: "Place as custom event for element" }
         ]
     },
     methods: {
