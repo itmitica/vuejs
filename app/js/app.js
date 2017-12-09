@@ -3,12 +3,13 @@ var demoIntro = new Vue({
     data: {
         message: 'Hello Vue!',
         seen: true,
+        seenColor: "",
         directives: [
-            { code: '{{ }}', text: "binding content (text interpolation)" },
-            { code: 'v-bind', text: "binding element attributes" },
-            { code: 'v-model', text: "binding input elements (two way)" },
+            { code: '{{ }}', text: "binding content" },
+            { code: 'v-bind', text: "binding attributes" },
+            { code: 'v-model', text: "binding input (two way)" },
             { code: 'v-if', text: "binding DOM structure" },
-            { code: 'v-for', text: "binding DOM structure (iterative)" }
+            { code: 'v-for', text: "binding DOM structure" }
         ]
     },
     methods: {
@@ -17,6 +18,7 @@ var demoIntro = new Vue({
         },
         toggleVisibility: function () {
             this.seen = $("#toggle-visibility").is(':checked');
+            this.seenColor = this.seen ? "" : "grey-text text-lighten-1";
         }
     }
 })

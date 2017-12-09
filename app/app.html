@@ -50,7 +50,7 @@
                     <a class="waves-effect waves-light btn" v-on:click="reverseMessage">Reverse</a>
                 </form>
 
-                <p>Watch here &rarr;
+                <p v-bind:class="seenColor">Watch here &rarr;
                     <span v-if="seen">Now you see me</span>
                 </p>
 
