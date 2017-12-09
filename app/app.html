@@ -20,6 +20,25 @@
 
             <div class="col s12 m8 l6 xl6">
 
+                <h2>Introduction</h2>
+
+                <div class="card">
+
+                    <ul class="collection">
+                        <li class="collection-item" v-for="directive in directives">
+                            <div>
+                                <code>{{ directive.code }}</code>
+                                <div class="secondary-content">{{ directive.text }}</div>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="col s12 m8 l6 xl6">
+
                 <h2>{{message }}</h2>
 
                 <form>
@@ -42,25 +61,6 @@
                         <span class="lever"></span>
                         On
                     </label>
-                </div>
-
-            </div>
-
-            <div class="col s12 m8 l6 xl6">
-
-                <h2>Introduction</h2>
-
-                <div class="card">
-
-                    <ul class="collection">
-                        <li class="collection-item" v-for="directive in directives">
-                            <div>
-                                <code>{{ directive.code }}</code>
-                                <div class="secondary-content">{{ directive.text }}</div>
-                            </div>
-                        </li>
-                    </ul>
-
                 </div>
 
             </div>
