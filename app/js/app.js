@@ -5,12 +5,12 @@ var demoIntro = new Vue({
         seen: true,
         seenColor: "",
         directives: [
-            { code: '{{ }}', result: "binding content", placement: "as content" },
-            { code: 'v-bind', result: "binding attributes",  placement: "as attribute prefix" },
-            { code: 'v-model', result: "binding input, two way", placement: "as input element attribute" },
-            { code: 'v-if', result: "binding DOM structure", placement: "as element attribute" },
-            { code: 'v-for', result: "binding DOM structure", placement: "as element attribute" },
-            { code: 'v-on', result: "binding events", placement: "as event prefix" }
+            { code: '{{ property }}', result: "binding content to app state", placement: "as content" },
+            { code: 'v-bind:attribute="property"', result: "binding attributes to app state",  placement: "as prefix for attribute" },
+            { code: 'v-model="property"', result: "binding input to app state, two way", placement: "as custom attribute for input element" },
+            { code: 'v-if="property"', result: "binding DOM structure to app state", placement: "as custom attribute for element" },
+            { code: 'v-for="property enumeration"', result: "binding DOM structure to app state", placement: "as custom attribute for element" },
+            { code: 'v-on:event="method"', result: "binding events to app methods", placement: "as custom event for element" }
         ]
     },
     methods: {
