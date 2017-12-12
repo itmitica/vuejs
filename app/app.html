@@ -17,12 +17,10 @@
     <div id="demo-intro">
         <div class="row">
             <div class="col s12 m12 l7 xl7">
-                <demo-theory
-                    v-bind:chapter="chapter"
-                    v-bind:directivecode="directive.code"
-                    v-bind:directiveeffect="directive.effect"
-                    v-bind:directiveplacement="directive.placement">
-                </demo-theory>
+                <demo-chapter v-bind:chapter="chapter">
+                </demo-chapter>
+
+                <demo-table v-bind:directives="directives"></demo-table>
             </div>
 
             <div class="col s0 m0 l1 xl1"></div>
