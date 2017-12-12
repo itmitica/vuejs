@@ -19,7 +19,7 @@ var demoIntro = new Vue({
         chapter: "Introduction",
         directives: [
             { id:'0', code: '{{ property }}', effect: "Binds document content to app 'data' state.", placement: "Place as content." },
-            { id:'1', code: 'v-bind:attribute="property"', effect: "Binds element attribute value to app 'data' state.",  placement: "Place as prefix for attribute." },
+            { id:'1', code: 'v-bind:attribute="property"', effect: "Binds element (custom) attribute value to app 'data' state.",  placement: "Place as prefix for attribute." },
             { id:'2', code: 'v-model="property"', effect: "Binds input element value to app 'data' state, two way.", placement: "Place as custom attribute for input element." },
             { id:'3', code: 'v-if="property"', effect: "Binds DOM structure to app 'data' state.", placement: "Place as custom attribute for element." },
             { id:'5', code: 'v-for="var in property"', effect: "Binds DOM structure to app 'data' state.", placement: "Place as custom attribute for element." },
