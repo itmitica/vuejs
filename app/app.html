@@ -17,27 +17,12 @@
     <div id="demo-intro">
         <div class="row">
             <div class="col s12 m12 l7 xl7">
-                <h2>Introduction</h2>
-
-                <table class="bordered responsive-table">
-                    <thead>
-                        <thead>
-                            <tr>
-                                <th>Directive</th>
-                                <th>Effect/Placement</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr v-for="directive in directives">
-                                <td class="code">
-                                    <code>{{ directive.code }}</code>
-                                </td>
-                                <td>
-                                    {{ directive.effect }} {{ directive.placement }}
-                                </td>
-                            </tr>
-                        </tbody>
-                </table>
+                <demo-theory
+                    v-bind:chapter="chapter"
+                    v-bind:directivecode="directive.code"
+                    v-bind:directiveeffect="directive.effect"
+                    v-bind:directiveplacement="directive.placement">
+                </demo-theory>
             </div>
 
             <div class="col s0 m0 l1 xl1"></div>
@@ -52,7 +37,7 @@
 
                 <a class="waves-effect waves-light btn" v-on:click="reverseMessage">Reverse</a>
 
-                <p v-bind:class="seenColor">Watch here &rarr;
+                <p v-bind:class="seenColor">Watch this &rarr;
                     <span v-if="seen">Now you see me</span>
                 </p>
 
