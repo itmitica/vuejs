@@ -25,7 +25,7 @@ var demoIntro = new Vue({
             { id:'5', code: 'v-for="var in property"', effect: "Binds DOM structure to app 'data' state.", placement: "Place as custom attribute for element." },
             { id:'5', code: 'v-on:event="method"', effect: "Binds events to app methods.", placement: "Place as custom attribute for element." },
             { id:'6', code: 'Vue.component', effect: "Binds templates to app.", placement: "Place as Vue instance for app, with pre-defined options." },
-            { id:'7', code: '<custom-component>', effect: "Binds custom components to app 'data' state, through 'Vue.component' instances.", placement: "Place as custom element for document, along 'v-bind's for app 'data' state." }
+            { id:'7', code: '<custom-component>', effect: "Binds 'Vue.component' templates to app 'data' state.", placement: "Place as custom element for document, along with respective 'v-bind's for app 'data' state." }
         ],
         message: 'Hello Vue!',
         seen: true,
