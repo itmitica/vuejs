@@ -1,0 +1,2 @@
+VueDirective
+         ::= 'v-' DirectiveName ( ( ':' Argument ( '.' Modifier )? )? '=' JavascriptExpression )?
